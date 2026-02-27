@@ -1,0 +1,92 @@
+body {
+    margin: 0;
+    font-family: 'Georgia', serif;
+    background: url("foto-nosso1.jpeg") no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+body::before {
+    content: "";
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.65);
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.hidden {
+    display: none;
+}
+
+header {
+    padding: 40px 20px;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+section {
+    margin: 50px 20px;
+}
+button {
+    padding: 12px 25px;
+    border-radius: 30px;
+    border: none;
+    background: #d4af37;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 10px;
+    transition: 0.3s;
+}
+button:hover {
+    transform: scale(1.1);
+}
+
+.galeria img {
+    width: 250px;
+    border-radius: 20px;
+    margin: 10px;
+    max-width: 90%;
+}
+
+video {
+    width: 80%;
+    max-width: 600px;
+    border-radius: 20px;
+}
+
+.pedido {
+    margin-top: 80px;
+}
+
+.botoes {
+    position: relative;
+}
+
+#btnNao {
+    position: relative;
+}
+
+/* RESPONSIVO CELULAR */
+@media (max-width: 768px) {
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    video {
+        width: 95%;
+    }
+
+    .galeria img {
+        width: 90%;
+    }
+    button {
+        width: 80%;
+    }
+}

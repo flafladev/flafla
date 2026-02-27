@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nosso Amor 💍</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- TELA SENHA -->
+<div id="telaSenha">
+    <h2>Quando Foi Nosso Primeiro Beijo 💖</h2>
+    <input type="password" id="senhaInput">
+    <button onclick="verificarSenha()">Entrar</button>
+    <p id="erroSenha"></p>
+</div>
+
+<!-- SITE -->
+<div id="site" class="hidden">
+
+<header>
+    <h1 id="tituloAnimado"></h1>
+    <button onclick="tocarMusica()">🎵 Nossa Música</button>
+</header>
+
+<section>
+    <h2>⏳Tempo Passando Raiva e Muito Amor</h2>
+    <div id="contador"></div>
+</section>
+
+<section>
+    <h2>📸 Nossos Momentos</h2>
+    <div class="galeria">
+        <img src="foto-nosso2.jpeg">
+        <img src="foto-nosso1.jpeg">
+        <img src="">
+
+    </div>
+</section>
+
+<section>
+    <h2>🎥 Nossos Vídeos</h2>
+
+    <div class="videos">
+
+        <video controls>
+            <source src="video-nosso1.mp4" type="video/mp4">
+        </video>
+
+        <video controls>
+            <source src="video-nosso2.mp4" type="video/mp4">
+        </video>
+
+    </div>
+</section>
+
+<section class="pedido">
+    <h2>Você aceita me ter mesmo nos dias ruins? 💍❤️</h2>
+    <div class="botoes">
+        <button onclick="respostaSim()">SIM 💖</button>
+        <button id="btnNao" onmouseover="fugir()">Não 😅</button>
+    </div>
+</section>
+
+</div>
+
+<audio id="musica" src="musica-fundo.mp3" loop></audio>
+
+<script src="script.js"></script>
+</body>
+</html>
