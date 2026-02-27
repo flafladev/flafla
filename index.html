@@ -1,72 +1,62 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nosso Amor 💍</title>
+<title>Nosso Universo</title>
 <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<!-- TELA SENHA -->
-<div id="telaSenha">
-    <h2>Quando Foi Nosso Primeiro Beijo 💖</h2>
-    <input type="password" id="senhaInput">
-    <button onclick="verificarSenha()">Entrar</button>
-    <p id="erroSenha"></p>
+<canvas id="space"></canvas>
+
+<div class="characters">
+<svg viewBox="0 0 400 300" class="scene">
+
+  <!-- Mulher -->
+  <g class="woman">
+    <!-- cabeça -->
+    <circle cx="130" cy="120" r="35" fill="#ffe0d6"/>
+    <!-- cabelo castanho claro -->
+    <path d="M95 110 Q130 60 165 110 V140 H95 Z" fill="#b5651d"/>
+    <!-- corpo -->
+    <rect x="115" y="155" width="30" height="70" rx="15" fill="#ff6b81"/>
+  </g>
+
+  <!-- Homem -->
+  <g class="man">
+    <!-- cabeça -->
+    <circle cx="250" cy="120" r="35" fill="#c68642"/>
+    <!-- cabelo preto -->
+    <path d="M215 105 Q250 70 285 105 V120 H215 Z" fill="#111"/>
+    <!-- corpo -->
+    <rect x="235" y="155" width="30" height="70" rx="15" fill="#1e90ff"/>
+  </g>
+
+</svg>
 </div>
 
-<!-- SITE -->
-<div id="site" class="hidden">
 
-<header>
-    <h1 id="tituloAnimado"></h1>
-    <button onclick="tocarMusica()">🎵 Nossa Música</button>
-</header>
-
-<section>
-    <h2>⏳Tempo Passando Raiva e Muito Amor</h2>
-    <div id="contador"></div>
-</section>
-
-<section>
-    <h2>📸 Nossos Momentos</h2>
-    <div class="galeria">
-        <img src="foto-nosso2.jpeg">
-        <img src="foto-nosso1.jpeg">
-        <img src="">
-
+<section class="hero">
+    <div class="glass">
+        <h1>Uma Experiência Exclusiva 💎</h1>
+        <p>Preparada especialmente para você.</p>
+        <button class="btn-premium" onclick="startQuiz()">Começar Experiência</button>
     </div>
 </section>
-
-<section>
-    <h2>🎥 Nossos Vídeos</h2>
-
-    <div class="videos">
-
-        <video controls>
-            <source src="video-nosso1.mp4" type="video/mp4">
-        </video>
-
-        <video controls>
-            <source src="video-nosso2.mp4" type="video/mp4">
-        </video>
-
-    </div>
-</section>
-
-<section class="pedido">
-    <h2>Você aceita me ter mesmo nos dias ruins? 💍❤️</h2>
-    <div class="botoes">
-        <button onclick="respostaSim()">SIM 💖</button>
-        <button id="btnNao" onmouseover="fugir()">Não 😅</button>
-    </div>
-</section>
-
+<div class="floating-photos">
+    <img src="foto-nosso1.jpeg" class="photo">
+    <img src="foto-nosso2.jpeg" class="photo">
+    <img src="foto-nosso3.jpeg" class="photo">
 </div>
-
-<audio id="musica" src="musica-fundo.mp3" loop></audio>
+<section id="quiz-section" class="hidden">
+    <div class="glass quiz-box">
+        <h2>Quiz Exclusivo 💖</h2>
+        <h3 id="question"></h3>
+        <div id="answers"></div>
+        <p id="reward"></p>
+    </div>
+</section>
 
 <script src="script.js"></script>
 </body>
